@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.englishwordproject">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".broad_and_prefs.App"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_icon"
+        android:label="E.Helper"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Design.Light.NoActionBar">
+        <activity android:name=".IntroActivity">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
+        <receiver
+            android:name=".broad_and_prefs.Mybroadcast"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.SCREEN_OFF" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".MyWordBookActivity" />
+        <activity android:name=".QuizSolvingActivity" />
+        <activity android:name=".HomeActivity">
+        </activity>
+        <activity android:name=".MainActivity" />
+    </application>
+
+</manifest>
